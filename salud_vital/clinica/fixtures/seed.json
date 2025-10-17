@@ -1,0 +1,123 @@
+[
+  {
+    "model": "clinica.especialidad",
+    "pk": 1,
+    "fields": {
+      "nombre": "Cardiología"
+    }
+  },
+  {
+    "model": "clinica.especialidad",
+    "pk": 2,
+    "fields": {
+      "nombre": "Pediatría"
+    }
+  },
+  {
+    "model": "clinica.paciente",
+    "pk": 1,
+    "fields": {
+      "RUT": "12.345.678-9",
+      "nombre": "Ana Pérez",
+      "fecha_nacimiento": "1990-05-12",
+      "sexo": "F"
+    }
+  },
+  {
+    "model": "clinica.paciente",
+    "pk": 2,
+    "fields": {
+      "RUT": "9.876.543-2",
+      "nombre": "Carlos Ruiz",
+      "fecha_nacimiento": "1985-11-30",
+      "sexo": "M"
+    }
+  },
+  {
+    "model": "clinica.medico",
+    "pk": 1,
+    "fields": {
+      "RUT": "7.654.321-0",
+      "nombre": "María Gómez",
+      "especialidad": 1
+    }
+  },
+  {
+    "model": "clinica.medico",
+    "pk": 2,
+    "fields": {
+      "RUT": "16.543.210-1",
+      "nombre": "Juan Torres",
+      "especialidad": 2
+    }
+  },
+  {
+    "model": "clinica.tratamiento",
+    "pk": 1,
+    "fields": {
+      "nombre": "Reposo relativo",
+      "descripcion": "Reposo y control en 7 días"
+    }
+  },
+  {
+    "model": "clinica.medicamento",
+    "pk": 1,
+    "fields": {
+      "nombre": "Paracetamol 500mg",
+      "descripcion": "Cada 8 horas si dolor"
+    }
+  },
+  {
+    "model": "clinica.consultamedica",
+    "pk": 1,
+    "fields": {
+      "paciente": 1,
+      "medico": 1,
+      "fecha": "2025-10-16T10:00:00Z",
+      "motivo": "Dolor torácico",
+      "diagnostico": "Descartar angina",
+      "tratamiento": 1
+    }
+  },
+  {
+    "model": "clinica.recetamedica",
+    "pk": 1,
+    "fields": {
+      "consulta": 1,
+      "indicaciones": "Control en 7 días"
+    }
+  },
+  {
+    "model": "clinica.recetaitem",
+    "pk": 1,
+    "fields": {
+      "receta": 1,
+      "medicamento": 1,
+      "dosis": "1 comprimido",
+      "frecuencia": "cada 8 horas",
+      "duracion_dias": 5
+    }
+  },
+  {
+    "model": "clinica.cita",
+    "pk": 1,
+    "fields": {
+      "paciente": 1,
+      "medico": 1,
+      "fecha_hora": "2025-10-20T09:00:00Z",
+      "estado": "programada",
+      "consulta": 1
+    }
+  },
+  {
+    "model": "clinica.cita",
+    "pk": 2,
+    "fields": {
+      "paciente": 2,
+      "medico": 2,
+      "fecha_hora": "2025-10-21T11:30:00Z",
+      "estado": "programada",
+      "consulta": null
+    }
+  }
+]
